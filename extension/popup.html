@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vim-Overleaf</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+    }
+    h1 {
+      font-size: 18px;
+      margin: 0 0 16px 0;
+      color: #333;
+    }
+    .status {
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      font-size: 13px;
+    }
+    .status.disconnected {
+      background-color: #fee;
+      color: #c33;
+      border: 1px solid #fcc;
+    }
+    .status.connected {
+      background-color: #efe;
+      color: #3a3;
+      border: 1px solid #cfc;
+    }
+    .status.active {
+      background-color: #eef;
+      color: #33a;
+      border: 1px solid #ccf;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 8px;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    button.danger {
+      background-color: #dc3545;
+    }
+    button.danger:hover {
+      background-color: #c82333;
+    }
+    .info {
+      font-size: 12px;
+      color: #666;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>Vim-Overleaf</h1>
+
+  <div id="status" class="status disconnected">
+    サーバー接続待機中...
+  </div>
+
+  <button id="toggleBtn" disabled>選択モードを開始</button>
+
+  <div class="info">
+    <div>ショートカット: Ctrl+Shift+E</div>
+    <div id="selectedInfo" style="margin-top: 8px; display: none;">
+      選択中: <span id="selectedElement"></span>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
