@@ -1,0 +1,21 @@
+{
+  "name": "vim-overleaf-server",
+  "version": "1.0.0",
+  "description": "WebSocketサーバー - ブラウザ拡張機能とローカルファイルの双方向同期",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "websocket",
+    "vim",
+    "overleaf",
+    "sync"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.14.2"
+  }
+}

@@ -1,0 +1,23 @@
+# Node modules
+server/node_modules/
+
+# Config file (should be created by user)
+server/config.json
+
+# Sync file
+*.sync.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
